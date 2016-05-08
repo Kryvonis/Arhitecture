@@ -36,3 +36,7 @@ class Service:
     def __iter__(self):
         for i in self._l:
             yield i
+
+    def get_all_games(self):
+        return list(self._l)
+
