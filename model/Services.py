@@ -1,4 +1,4 @@
-import Model.Model
+from model.Model import Model
 
 
 class Service:

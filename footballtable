@@ -1,0 +1,5 @@
+#!/usr/bin/python3
+from controller.InteractiveController import InteractiveController
+from model.Services import Service
+
+InteractiveController(Service()).run()
