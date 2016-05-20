@@ -39,4 +39,3 @@ class Service:
 
     def get_all_games(self):
         return list(self._l)
-
