@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+from controller.InteractiveController import InteractiveController
+from controller.PromptController import PromptController
+from model.Services import Service
+from Configurator import Configurator
+
+configurator = Configurator()
+configurator.get_controller().run()
+
+

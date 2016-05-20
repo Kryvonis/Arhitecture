@@ -1,0 +1,4 @@
+- !!python/object:model.Model.Model {_date: 11.11.11, _res_one: '1', _res_two: '0',
+  _team_one: liver, _team_two: mcity}
+- !!python/object:model.Model.Model {_date: 11.11.11, _res_one: '1', _res_two: '0',
+  _team_one: liver, _team_two: mcity}
