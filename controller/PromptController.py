@@ -18,6 +18,6 @@ class PromptController(Controller):
         elif opts[0][0] in ('-a', '--add'):
             self.data.add(Model(args[0], args[1], args[2], args[3], args[4]))
         elif opts[0][0] in ('-t', '--team'):
-            self.view.output(self.data.get_by_team(opts[0][0]))
+            self.view.output(self.data.get_by_team(opts[0][1]))
 
 

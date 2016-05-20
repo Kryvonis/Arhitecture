@@ -17,7 +17,6 @@ class Configurator:
             self.config = self._first_launch()
         else:
             self.config = ConfigParser().read(self._config_file_path)
-        print(self.config)
 
     def _first_launch(self):
         cp = ConfigParser()
@@ -27,7 +26,7 @@ class Configurator:
             'yaml': 'True'
         }
         cp['Restore'] = {'from': 'json'}
-        cp['Controller'] = {'type': 'prompt'}
+        cp['Controller'] = {'type': 'interactive'}
         with open(self._config_file_path, 'w') as config:
             cp.write(config)
         return cp
@@ -54,6 +53,6 @@ class Configurator:
         return data
 
     def get_controller(self):
-        type_ = 'prompt'#self.config['Controller']['type']
+        type_ = self.config['Controller']['type']
         data = self._get_data()
         return PromptController(data) if type_ == 'prompt' else InteractiveController(data)

@@ -37,6 +37,13 @@ class Service:
         for i in self._l:
             yield i
 
+    def get_by_team(self, name):
+        l = []
+        for i in self:
+            if i._team_one == name or i._team_two == name:
+                l.append(i)
+        return l
+
     def get_all_games(self):
         return list(self._l)
 
